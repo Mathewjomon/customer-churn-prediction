@@ -28,6 +28,17 @@ This project predicts customer churn in the telecom domain using machine learnin
 - Scikit-learn
 - Matplotlib, Seaborn
 
+## Model Tuning & Business Considerations
+
+Since the dataset is imbalanced, accuracy alone is not sufficient for evaluating churn prediction.
+Missing a churn customer is more costly than incorrectly flagging a non-churn customer.
+
+To address this, the Random Forest model was tuned using class weighting and tree depth constraints
+to prioritize recall for churn customers. This improved the model’s ability to identify customers
+at risk of churning, even at the cost of a slight reduction in overall accuracy.
+
+Model selection was based on business impact rather than metric optimization alone.
+
 ## Future Work
 - Add neural network model
 - Experiment with threshold tuning
